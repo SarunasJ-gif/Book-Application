@@ -118,9 +118,9 @@ public class BookController {
             List<Book> allSortBarcodes = new ArrayList<>();
             if ("Book".equals(bookType)) {
                 allSortBarcodes.addAll(bookService.findBookAllBarcodeSort());
-            } else if ("AntiqueBook".equals(bookType))
+            } else if ("AntiqueBook".equals(bookType)) {
                 allSortBarcodes.addAll(bookService.findAntiqueBookAllBarcodeSort());
-             else if ("ScienceJournal".equals(bookType)) {
+            } else if ("ScienceJournal".equals(bookType)) {
                 allSortBarcodes.addAll(bookService.findJournalAllBarcodeSort());
             }
             if (allSortBarcodes.isEmpty()) {

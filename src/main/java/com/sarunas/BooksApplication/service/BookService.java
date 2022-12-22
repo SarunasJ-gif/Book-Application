@@ -15,13 +15,13 @@ import java.util.List;
 public class BookService {
 
     @Autowired
-    BookRepository bookRepository;
+    private BookRepository bookRepository;
 
     @Autowired
-    AntiqueBookRepository antiqueBookRepository;
+    private AntiqueBookRepository antiqueBookRepository;
 
     @Autowired
-    ScienceJournalRepository scienceJournalRepository;
+    private ScienceJournalRepository scienceJournalRepository;
 
 
     public List<Book> findAllBooks() {

@@ -7,6 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
 @Entity
 @Getter
 @Setter
@@ -14,7 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ScienceJournal extends Book{
 
-    //    @Max
-    //    @Min
+    @Min(value = 1, message = "must be equal or greater than 1")
+    @Max(value = 10, message = "must be equal or less than 10")
     private int rating;
 }

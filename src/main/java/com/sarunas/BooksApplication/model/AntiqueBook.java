@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.Max;
+
 @Entity
 @Getter
 @Setter
@@ -14,6 +16,6 @@ import lombok.Setter;
 public class AntiqueBook extends Book{
 
 
-//    @Max
+    @Max(value = 1900, message = "must be equal or less than 1900")
     private int releaseYears;
 }
